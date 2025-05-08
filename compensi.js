@@ -321,9 +321,35 @@ function gestisciIndietro() {
     });
 }
 
+// Funzione per gestire il pulsante nuovo calcolo
+function gestisciNuovoCalcolo() {
+    const newCalcBtn = document.getElementById('newCalcBtn');
+    if (!newCalcBtn) return;
+    
+    newCalcBtn.addEventListener('click', function() {
+        // Reset del form
+        document.getElementById('compensiForm').reset();
+        
+        // Nascondi i contenitori delle ore
+        document.getElementById('oreTurno3OreContainer').classList.add('hidden');
+        document.getElementById('oreTurno4OreContainer').classList.add('hidden');
+        
+        // Rimuovi gli attributi required
+        document.getElementById('oreTurno3Ore').removeAttribute('required');
+        document.getElementById('oreTurno4Ore').removeAttribute('required');
+        
+        // Mostra il form
+        document.getElementById('compensiForm').parentElement.classList.remove('hidden');
+        
+        // Nascondi il risultato
+        document.getElementById('risultatoContainer').classList.add('hidden');
+    });
+}
+
 // Inizializzazione delle funzioni
 document.addEventListener('DOMContentLoaded', function() {
     gestisciFormCompensi();
     gestisciStampa();
     gestisciIndietro();
+    gestisciNuovoCalcolo();
 });
