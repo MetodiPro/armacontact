@@ -2,7 +2,7 @@
 
 // Credenziali di esempio (in un'applicazione reale, questo dovrebbe essere gestito lato server)
 const USERS = [
-    { username: 'admin', password: 'admin123', displayName: 'Amministratore' },
+    { username: 'admin@armacontact.com', password: 'Angela2025!', displayName: 'Amministratore' },
     { username: 'user', password: 'user123', displayName: 'Utente' }
 ];
 
