@@ -1,0 +1,91 @@
+/* Colori personalizzati per ARMA CONTACT */
+
+/* Colori primari */
+.text-primary {
+    color: #FF7F27; /* Arancione */
+}
+
+.bg-primary {
+    background-color: #FF7F27; /* Arancione */
+}
+
+.border-primary {
+    border-color: #FF7F27; /* Arancione */
+}
+
+/* Sovrascrittura delle classi Tailwind per i form */
+.focus\:ring-indigo-500:focus {
+    --tw-ring-color: #FF7F27 !important; /* Arancione */
+}
+
+.focus\:border-indigo-500:focus {
+    --tw-border-color: #FF7F27 !important; /* Arancione */
+}
+
+.hover\:bg-indigo-700:hover {
+    background-color: #E36410 !important; /* Arancione scuro */
+}
+
+.bg-indigo-600 {
+    background-color: #FF7F27 !important; /* Arancione */
+}
+
+.text-indigo-600 {
+    color: #FF7F27 !important; /* Arancione */
+}
+
+/* Sovrascrittura per altri colori */
+.bg-red-600, .bg-green-600 {
+    background-color: #FF7F27 !important; /* Arancione */
+}
+
+.hover\:bg-red-700:hover, .hover\:bg-green-700:hover {
+    background-color: #E36410 !important; /* Arancione scuro */
+}
+
+.focus\:ring-red-500:focus, .focus\:ring-green-500:focus {
+    --tw-ring-color: #FF7F27 !important; /* Arancione */
+}
+
+/* Stile per il bottone di submit */
+button[type="submit"] {
+    background-color: #FF7F27 !important; /* Arancione */
+}
+
+button[type="submit"]:hover {
+    background-color: #E36410 !important; /* Arancione scuro */
+}
+
+/* Stile per i checkbox */
+input[type="checkbox"] {
+    color: #FF7F27 !important; /* Arancione */
+}
+
+/* Per la fascia */
+#risultatoFascia {
+    color: #FF7F27 !important; /* Arancione */
+}
+
+/* Stili per la stampa rimangono gli stessi */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    #risultatoCalcolo,
+    #risultatoCalcolo * {
+        visibility: visible;
+    }
+    
+    #risultatoCalcolo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    
+    #printBtn,
+    #backBtn {
+        display: none;
+    }
+}

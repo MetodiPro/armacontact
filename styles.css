@@ -1,0 +1,24 @@
+/* Stili personalizzati per l'applicazione Calcolo Compensi */
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    #risultatoCalcolo,
+    #risultatoCalcolo * {
+        visibility: visible;
+    }
+    
+    #risultatoCalcolo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    
+    #printBtn,
+    #backBtn {
+        display: none;
+    }
+}
