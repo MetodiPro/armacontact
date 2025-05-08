@@ -348,6 +348,7 @@ function gestisciNuovoCalcolo() {
 
 // Inizializzazione delle funzioni
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("Inizializzazione delle funzioni compensi.js");
     gestisciFormCompensi();
     gestisciStampa();
     gestisciIndietro();

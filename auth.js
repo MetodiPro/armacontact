@@ -64,9 +64,11 @@ function handleLogin() {
 // Gestione del logout
 function handleLogout() {
     const logoutBtn = document.getElementById('logout-btn');
+    console.log("Pulsante logout trovato:", logoutBtn);
     if (!logoutBtn) return;
     
     logoutBtn.addEventListener('click', function() {
+        console.log("Pulsante logout cliccato!");
         // Rimuovi l'utente dal localStorage
         localStorage.removeItem('loggedUser');
         
@@ -77,7 +79,19 @@ function handleLogout() {
 
 // Inizializzazione delle funzioni di autenticazione
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM completamente caricato - auth.js");
     checkAuth();
     handleLogin();
     handleLogout();
+    
+    // Controlla di nuovo il pulsante logout dopo un breve ritardo
+    setTimeout(function() {
+        const logoutBtn = document.getElementById('logout-btn');
+        console.log("Pulsante logout dopo timeout:", logoutBtn);
+        if (logoutBtn) {
+            logoutBtn.style.display = 'inline-block';
+            logoutBtn.style.backgroundColor = '#FF7F27';
+            logoutBtn.style.color = 'white';
+        }
+    }, 500);
 });
